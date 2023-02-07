@@ -1,12 +1,14 @@
 import React from 'react'
 
 const styles = {
-
+headerContainer: {
+  backgroundColor: "red"
+}
 }
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <div className={styles.headerContainer}></div>
   )
 }
 
