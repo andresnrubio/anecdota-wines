@@ -1,10 +1,13 @@
 import React from 'react'
-import Header from '../components/common/Header'
+import Header from '../components/common/Header/Header'
+import CardsSelector from '../components/cardsSelector'
 
 const Home = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
+      <h1>HOME</h1>
+      {/* <CardsSelector /> */}
     </>
   )
 }

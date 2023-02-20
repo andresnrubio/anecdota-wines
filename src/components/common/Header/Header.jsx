@@ -2,9 +2,12 @@ import React from 'react'
 
 const styles = {
 headerContainer: {
-  backgroundColor: "red"
+  backgroundColor: "#1E1E1E",
+  width: "100vw",
+  height: '50px',
 }
 }
+console.log(styles.headerContainer)
 
 const Header = () => {
   return (
