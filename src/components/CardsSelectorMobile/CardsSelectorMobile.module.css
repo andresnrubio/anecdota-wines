@@ -1,7 +1,7 @@
 .CardsSelectorMobileContainer{
     width: 100%;
     margin-top: 130px;
-    height: calc(1000vh - 130px);
+    height: calc(100vh - 230px);
     background-color: aliceblue;
     overflow: hidden;
 }
@@ -13,7 +13,7 @@
 }
 
 .selected{
-    height: calc(100vh - 210px);
+    height: calc(100vh - 310px);
 }
 
 .background{
@@ -21,12 +21,17 @@
     background-size: cover;
     width: 100%;
     height: 100vh;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 0.3px #1E1E1E;
 }
 
 .title{
     display: flex;
     height: 40px;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -35,4 +40,18 @@
     background-position-x: 65%;
 }
 .region{
+    padding: 0 20px ;
+    line-height: initial;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.region .pais{
+        font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+        letter-spacing: 2px;
+        font-size: 10px;
+        -webkit-text-stroke: 0px #1E1E1E;
 }
