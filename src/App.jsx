@@ -1,15 +1,15 @@
-import { useRoutes } from 'react-router-dom'
-import routes from './routes'
-import './App.css'
+import { useRoutes } from 'react-router-dom';
+import routes from './routes';
+import './App.css';
+import { LanguageProvider } from './contexts/LanguageContext';
 
 function App() {
-  const routing = useRoutes(routes)
+  const routing = useRoutes(routes);
   return (
-    //TODO aca va a ser llamado el header y footer, app.jsx sera el root de la app
     <>
-      { routing }
+      <LanguageProvider>{routing}</LanguageProvider>
     </>
-    )
+  );
 }
 
-export default App
+export default App;

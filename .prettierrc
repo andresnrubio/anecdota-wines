@@ -1,0 +1,69 @@
+{
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "endOfLine": "auto",
+  "htmlWhitespaceSensitivity": "ignore",
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "printWidth": 80,
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "proseWrap": "preserve",
+  "tabWidth": 2,
+  "useTabs": false,
+  "overrides": [
+    {
+      "files": "*.jsx",
+      "options": {
+        "jsxBracketSameLine": false,
+        "jsxSingleQuote": true
+      }
+    },
+    {
+      "files": "*.js",
+      "options": {
+        "parser": "babel"
+      }
+    },
+    {
+      "files": "*.css",
+      "options": {
+        "parser": "css"
+      }
+    },
+    {
+      "files": "*.js",
+      "options": {
+        "printWidth": 100,
+        "overrides": [
+          {
+            "files": "*.jsx",
+            "options": {
+              "printWidth": 100
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "rules": {
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxEOF": 1,
+        "maxBOF": 0
+      }
+    ],
+    "no-multiple-spaces": [
+      "error",
+      {
+        "ignoreEOLComments": false,
+        "exceptions": {
+          "ImportDeclaration": true
+        }
+      }
+    ]
+  }
+}

@@ -1,12 +1,12 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-import styles from './MainLayout.module.css'
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import styles from './MainLayout.module.css';
 
 const MainLayout = () => {
-    return (
+  return (
     <div className={styles.container}>
       <Outlet />
     </div>
-  )
-}
-export default MainLayout
+  );
+};
+export default MainLayout;

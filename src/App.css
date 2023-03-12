@@ -10,12 +10,14 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Letter Gothic Std';
   src: url('./fonts/letterGothicStd-Bold.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Letter Gothic Std';
   src: url('./fonts/letterGothicStd.otf') format('opentype');

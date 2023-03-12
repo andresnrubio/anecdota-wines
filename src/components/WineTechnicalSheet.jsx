@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const WineTechnicalSheet = (wineDetails) => {
   return (
@@ -7,7 +7,7 @@ const WineTechnicalSheet = (wineDetails) => {
       <div className='details'></div>
       <div className='bottleImg'></div>
     </div>
-  )
-}
+  );
+};
 
-export default WineTechnicalSheet
+export default WineTechnicalSheet;
