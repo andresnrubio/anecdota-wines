@@ -1,4 +1,5 @@
 import React from 'react';
+import { malbec_bg, blend_bg, cabernet_franc_bg } from '../../assets';
 import styles from './CardsSelector.module.css';
 
 const CardsSelector = () => {
@@ -17,21 +18,32 @@ const CardsSelector = () => {
   //     })
   // }
   return (
-    <div classname={styles.container}>
-      <div>
+    <div className={styles.container}>
+      <div
+        className={styles.panel}
+        style={{ backgroundImage: `url(${malbec_bg})` }}
+      >
         <h3>Explore The World</h3>
       </div>
-      <div classname={styles.panel}>
-        <h3>Wild Forest</h3>
+      <div className={styles.panel}>
+        <div
+          style={{
+            backgroundImage: `url(${blend_bg})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            width: '100vw',
+            height: '100vh',
+          }}
+        >
+          <h3>Wild Forest</h3>
+        </div>
       </div>
-      <div classname={styles.panel}>
+      <div
+        className={styles.panel}
+        style={{ backgroundImage: `url(${cabernet_franc_bg})` }}
+      >
         <h3>Sunny Beach</h3>
-      </div>
-      <div classname={styles.panel}>
-        <h3>City on Winter</h3>
-      </div>
-      <div classname={styles.panel}>
-        <h3>Mountains - Clouds</h3>
       </div>
     </div>
   );

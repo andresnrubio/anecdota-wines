@@ -6,12 +6,12 @@ import CardsSelectorMobile from '../components/CardsSelectorMobile/CardsSelector
 
 const Home = () => {
   return (
-    <>
+    <div style={{ height: '100vh' }}>
       <Header />
       <CardsSelectorMobile />
-      {/* <CardsSelector /> */}
+      <CardsSelector />
       <Footer />
-    </>
+    </div>
   );
 };
 

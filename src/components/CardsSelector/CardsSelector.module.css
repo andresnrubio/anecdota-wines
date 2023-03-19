@@ -10,21 +10,25 @@
 
 .container {
   display: flex;
-  width: 90vw;
+  width: 100%;
+  background-color: #FFFF;
+  height: calc(100% - 170px);
+  overflow-x: hidden;
 }
+
 
 .panel {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 80vh;
-  border-radius: 50px;
-  color: #fff;
+  color: black;
+  height: 100%;
+  width: calc(100% + 100px);
   cursor: pointer;
   flex: 0.5;
-  margin: 10px;
-  position: relative;
-  -webkit-transition: all 700ms ease-in;
+  overflow: hidden;
+  transform: skewX(-15deg);
+  box-shadow: 25px -31px 23px rgba(0, 0, 0, 0.45);
 }
 
 .panel h3 {
@@ -51,7 +55,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .container {
     display: none;
   }
