@@ -1,23 +1,16 @@
 import React from 'react';
+import styles from './WineComposition.module.css';
 
-function WineComposition({
-  composition,
-  alcohol,
-  acidity,
-  sugar,
-  harvest,
-  oak,
-  stored,
-}) {
+function WineComposition({ malbec }) {
   return (
     <ul>
-      <li>COMPOSICIÓN: {composition}</li>
-      <li>ALCOHOL: {alcohol}</li>
-      <li>PH/ACIDEZ: {acidity}</li>
-      <li>AZUCAR RESIDUAL: {sugar}</li>
-      <li>COSECHA: {harvest}</li>
-      <li>ROBLE: {oak}</li>
-      <li>GUARDA: {stored}</li>
+      <li>COMPOSICIÓN: {malbec.composition}</li>
+      <li>ALCOHOL: {malbec.alcohol}</li>
+      <li>PH/ACIDEZ: {malbec.acidity}</li>
+      <li>AZUCAR RESIDUAL: {malbec.sugar}</li>
+      <li>COSECHA: {malbec.harvest}</li>
+      <li>ROBLE: {malbec.oak}</li>
+      <li>GUARDA: {malbec.stored}</li>
     </ul>
   );
 }

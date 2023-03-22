@@ -1,12 +1,16 @@
-import { color_icon, thermometer, cabernet } from '../../assets';
+import {
+  color_icon,
+  thermometer_icon,
+  cabernet_fruit_icon,
+} from '../../assets';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const WineVarietals = () => {
   const [icons, setIcons] = useState([
     { route: color_icon, text: 'COLOR BORDEAUX' },
-    { route: thermometer, text: '16/18°C' },
-    { route: cabernet, text: 'CABERNET SAUVIGNON' },
+    { route: thermometer_icon, text: '16/18°C' },
+    { route: cabernet_fruit_icon, text: 'CABERNET SAUVIGNON' },
   ]);
 
   const wineVarietals = icons.map((icon, index) => (

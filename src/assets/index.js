@@ -5,8 +5,12 @@ import logotipo from './logotipo.png';
 import isotipo from './isotipo.png';
 import vainilla_icon from './vainilla.png';
 import color_icon from './Color.png';
-import thermometer from './termometro.png';
-import cabernet from './cabernet.png';
+import thermometer_icon from './termometro.png';
+import cabernet_fruit_icon from './cabernet.png';
+import eucalyptus_icon from './Laurel.png';
+import butter_icon from './manteca.png';
+import cherry_icon from './Cereza.png';
+
 export {
   logotipo,
   isotipo,
@@ -15,6 +19,9 @@ export {
   malbec_bg,
   vainilla_icon,
   color_icon,
-  thermometer,
-  cabernet,
+  thermometer_icon,
+  cabernet_fruit_icon,
+  eucalyptus_icon,
+  butter_icon,
+  cherry_icon,
 };
