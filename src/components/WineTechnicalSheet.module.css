@@ -1,0 +1,9 @@
+.technicalSheetContainer {
+    background-color: #FFFFFF;
+    color: #1E1E1E;
+    display: flex;
+    justify-content: space-between;
+}
+.textInformation {
+    text-align: start;
+}
