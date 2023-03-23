@@ -7,31 +7,26 @@ import malbec from '../malbec2021.json';
 import WineAroma from './WineAromas/WineAroma';
 import WineTechnicalTitle from './WineTechnicalTitle/WineTechnicalTitle';
 import WineTerroir from './WineTerroir/WineTerroir';
+import WineCompositionBars from './WineCompositionBars/WineCompositionBars';
 
 const WineTechnicalSheet = (wineDetails) => {
   return (
     <div className={styles.technicalSheetContainer}>
       <section className={styles.textInformation}>
-        <div className='details'>
-          <WineTechnicalTitle malbec={malbec} />
-        </div>
-        <div className='details'>
-          <WineComposition malbec={malbec} />
-        </div>
-        <div className='details'>
-          <WineTerroir />
-        </div>
+        <WineTechnicalTitle malbec={malbec} />
+
+        <WineComposition malbec={malbec} />
+
+        <WineTerroir />
       </section>
       <section>
-        <div className='details'>
-          <WineVarietals />
-        </div>
-        <div className='details'>
-          <WineDescription />
-        </div>
-        <div className='details'>
-          <WineAroma />
-        </div>
+        <WineVarietals />
+
+        <WineCompositionBars malbec={malbec} />
+
+        <WineDescription />
+
+        <WineAroma />
       </section>
       <div className='bottleImg'></div>
     </div>
