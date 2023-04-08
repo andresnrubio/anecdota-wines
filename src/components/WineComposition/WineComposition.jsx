@@ -3,14 +3,28 @@ import styles from './WineComposition.module.css';
 
 function WineComposition({ malbec }) {
   return (
-    <ul>
-      <li>COMPOSICIÓN: {malbec.composition}</li>
-      <li>ALCOHOL: {malbec.alcohol}</li>
-      <li>PH/ACIDEZ: {malbec.acidity}</li>
-      <li>AZUCAR RESIDUAL: {malbec.sugar}</li>
-      <li>COSECHA: {malbec.harvest}</li>
-      <li>ROBLE: {malbec.oak}</li>
-      <li>GUARDA: {malbec.stored}</li>
+    <ul className={styles.list}>
+      <li>
+        COMPOSICIÓN: <span>{malbec.composition}</span>
+      </li>
+      <li>
+        ALCOHOL: <span>{malbec.alcohol}</span>
+      </li>
+      <li>
+        PH/ACIDEZ: <span>{malbec.acidity}</span>
+      </li>
+      <li>
+        AZUCAR RESIDUAL: <span>{malbec.sugar}</span>
+      </li>
+      <li>
+        COSECHA: <span>{malbec.harvest}</span>
+      </li>
+      <li>
+        ROBLE: <span>{malbec.oak}</span>
+      </li>
+      <li>
+        GUARDA: <span>{malbec.stored}</span>
+      </li>
     </ul>
   );
 }

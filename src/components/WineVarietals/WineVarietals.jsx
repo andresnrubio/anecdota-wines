@@ -1,3 +1,4 @@
+import styles from './WineVarietals.module.css';
 import {
   color_icon,
   thermometer_icon,
@@ -14,13 +15,23 @@ const WineVarietals = () => {
   ]);
 
   const wineVarietals = icons.map((icon, index) => (
-    <div key={index}>
+    <div key={index} className={styles.contenedorVarietals}>
       <img src={icon.route} alt={`Imagen ${index + 1}`} />
       <p>{icon.text}</p>
     </div>
   ));
 
-  return <div>{wineVarietals}</div>;
+  return (
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        gap: '30px',
+      }}
+    >
+      {wineVarietals}
+    </div>
+  );
 };
 
 export default WineVarietals;

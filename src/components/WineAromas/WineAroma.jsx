@@ -16,17 +16,26 @@ const WineAroma = () => {
   ]);
 
   const WineAroma = icons.map((icon, index) => (
-    <div key={index}>
+    <div key={index} className={styles.contenedorAroma}>
       <img src={icon.route} alt={`Imagen ${index + 1}`} />
       <p>{icon.text}</p>
     </div>
   ));
 
   return (
-    <div>
+    <>
       <h2>AROMAS</h2>
-      {WineAroma}
-    </div>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'flex-end',
+          justifyContent: 'center',
+          gap: '30px',
+        }}
+      >
+        {WineAroma}
+      </div>
+    </>
   );
   D;
 };

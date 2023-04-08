@@ -9,13 +9,19 @@ const WineCompositionBars = ({ malbec }) => {
     { name: 'ACIDEZ', quantity: 5 },
     { name: 'TANINOS', quantity: 5 },
   ]);
+
   const WineCompositionBars = bars.map((bar, index) => (
-    <div key={index}>
+    <div key={index} className={styles.bar}>
       <label for={`${index + 1}`}>{bar.name}</label>
-      <progress id={`${index + 1}`} value={bar.quantity} max='8'></progress>
+      <div className={styles.progress}>
+        {[...Array(bar.quantity)].map((_, index) => (
+          <div key={index} className={styles.barFiller}></div>
+        ))}
+        <div style={{ borderRight: 'solid 1px black', height: '140%' }} />
+      </div>
     </div>
   ));
-  return <div>{WineCompositionBars}</div>;
+  return <div className={styles.barContainer}>{WineCompositionBars}</div>;
 };
 
 export default WineCompositionBars;
