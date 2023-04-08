@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { malbec_bg, blend_bg, cabernet_franc_bg } from '../../assets';
 import styles from './CardsSelector.module.css';
 
 const CardsSelector = () => {
+  const [isSelected, setIsSelected] = useState('main');
+
+  useEffect(() => {}, [isSelected]);
+
+  // const checkSelected
   // const panels = document.querySelectorAll('.panel')
 
   // panels.forEach(panel => {
@@ -17,11 +22,13 @@ const CardsSelector = () => {
   //         panel.classList.remove('active')
   //     })
   // }
+
   return (
     <div className={styles.container}>
       <div
         className={styles.panel}
         style={{ backgroundImage: `url(${malbec_bg})` }}
+        onClick={() => setIsSelected('one')}
       >
         <h3>Explore The World</h3>
       </div>
@@ -35,6 +42,7 @@ const CardsSelector = () => {
             width: '100vw',
             height: '100vh',
           }}
+          onClick={() => setIsSelected('two')}
         >
           <h3>Wild Forest</h3>
         </div>
@@ -42,6 +50,7 @@ const CardsSelector = () => {
       <div
         className={styles.panel}
         style={{ backgroundImage: `url(${cabernet_franc_bg})` }}
+        onClick={() => setIsSelected('three')}
       >
         <h3>Sunny Beach</h3>
       </div>
