@@ -18,6 +18,7 @@
 
 
 .panel {
+  border: black 1px solid;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -28,7 +29,7 @@
   flex: 0.5;
   overflow: hidden;
   transform: skewX(-15deg);
-  box-shadow: 25px -31px 23px rgba(0, 0, 0, 0.45);
+  box-shadow: 20px 0px 20px 5px rgba(0, 0, 0, 0.45)
 }
 
 .panel h3 {

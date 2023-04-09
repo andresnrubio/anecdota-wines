@@ -1,6 +1,6 @@
 import blend_bg from './blend.png';
 import cabernet_franc_bg from './cabernet_franc.png';
-import malbec_bg from './malbec.png';
+import malbec_bg from './malbec_bg.png';
 import logotipo from './logotipo.png';
 import isotipo from './isotipo.png';
 
