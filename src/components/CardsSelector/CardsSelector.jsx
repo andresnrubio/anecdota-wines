@@ -1,128 +1,190 @@
 import React, { useEffect, useState } from 'react';
-import { malbec_bg, blend_bg, cabernet_franc_bg } from '../../assets';
 import styles from './CardsSelector.module.css';
+import { malbec_bg, blend_bg, cabernet_franc_bg, dot } from '../../assets';
+import SideBar from '../SideBar/SideBar';
+import wines from '../../data/winesData.json';
+import Title from '../common/Title/Title';
 
-const CardsSelector = () => {
+const CardsSelector = ({ inactive }) => {
   const [isSelected, setIsSelected] = useState('main');
-
-  useEffect(() => {}, [isSelected]);
-
-  // const panels = document.querySelectorAll('.panel')
-
-  // panels.forEach(panel => {
-  //     panel.addEventListener('click', () => {
-  //         removeActiveClasses()
-  //         panel.classList.add('active')
-  //     })
-  // })
-
-  // function removeActiveClasses() {
-  //     panels.forEach(panel => {
-  //         panel.classList.remove('active')
-  //     })
-  // }
-
-  // const style = {
-  //   panel: {
-  //     backgroundColor: isSelected === 'one' ? 'green' : 'red',
-  //     color: isSelected ? 'white' : 'black',
-  //     border: 'black 1px solid',
-  //     backgroundSize: 'cover',
-  //     backgroundPosition: 'center',
-  //     backgroundRepeat: 'no-repeat',
-  //     color: 'black',
-  //     height: '100%',
-  //     width: 'calc(100% + 100px)',
-  //     cursor: 'pointer',
-  //     flex: '0.5',
-  //     overflow: 'hidden',
-  //     transform: 'skewX(-15deg)',
-  //     boxShadow: '20px 0px 20px 5px rgba(0, 0, 0, 0.45)',
-  //   },
-  // };
-  let backgroundColor;
+  const [selectedOption, setSelectedOption] = useState({});
+  const [sideBarOpen, setSideBarOpen] = useState(false);
+  const [one, setOne] = useState();
+  const [two, setTwo] = useState();
+  const [three, setThree] = useState();
 
   useEffect(() => {
-    switch (isSelected) {
-      case 'one':
-        backgroundColor = 'red';
-        break;
-      case 'two':
-        backgroundColor = 'blue';
-        break;
-      case 'three':
-        backgroundColor = 'green';
-        break;
-      default:
-        backgroundColor = 'white';
+    if (isSelected !== 'main') {
+      setSideBarOpen(true);
+      let selectorID = 0;
+      switch (isSelected) {
+        case 'one':
+          selectorID = 1;
+          break;
+        case 'two':
+          selectorID = 2;
+
+          break;
+        case 'three':
+          selectorID = 3;
+
+          break;
+
+        default:
+          break;
+      }
+      setSelectedOption(wines.find((option) => option.id === selectorID));
     }
-    console.log(backgroundColor);
   }, [isSelected]);
 
-  const style = {
-    panel: {
-      border: 'black 1px solid',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      color: 'black',
-      height: '100%',
-      width: 'calc(100% + 100px)',
-      cursor: 'pointer',
-      flex: '0.5',
-      overflow: 'hidden',
-      transform: 'skewX(-15deg)',
-      boxShadow: '20px 0px 20px 5px rgba(0, 0, 0, 0.45)',
-    },
-    panelOne: {
-      // backgroundColor: isSelected === 'one' ? 'red' : 'white',
-      backgroundColor: backgroundColor,
-      color: isSelected === 'one' ? 'white' : 'black',
-    },
-    panelTwo: {
-      backgroundColor: isSelected === 'two' ? 'green' : 'white',
-      color: isSelected === 'two' ? 'white' : 'black',
-    },
-    panelThree: {
-      backgroundColor: isSelected === 'three' ? 'blue' : 'white',
-      color: isSelected === 'three' ? 'white' : 'black',
-    },
+  const changeSelectedOption = (newOptionId) => {
+    if (newOptionId) {
+      switch (selectedOption.id) {
+        case 1:
+          setIsSelected('one');
+          break;
+        case 2:
+          setIsSelected('two');
+          break;
+        case 3:
+          setIsSelected('three');
+          break;
+        default:
+          break;
+      }
+      setSelectedOption(wines.find((option) => option.id === newOptionId));
+    }
   };
+  const reOrder = (optionName) => {
+    if (optionName === isSelected) {
+      switch (optionName) {
+        case 'one':
+          return '0';
+        case 'two':
+          return '-100%';
+        case 'three':
+          return '-200%';
+        default:
+          break;
+      }
+    }
+  };
+  useEffect(() => {
+    setOne(reOrder('one'));
+    setTwo(reOrder('two'));
+    setThree(reOrder('three'));
+  }, [isSelected]);
 
   return (
-    <div className={styles.container}>
-      <div
-        style={Object.assign({}, style.panel, style.panelOne)}
-        // style={{ backgroundImage: `url(${malbec_bg})` }}
-        onClick={() => setIsSelected('one')}
-      >
-        <h3>Explore The World</h3>
-      </div>
-      <div
-        style={Object.assign({}, style.panel, style.panelTwo)}
-        onClick={() => setIsSelected('two')}
-      >
+    <div
+      className={styles.container}
+      style={{ pointerEvents: inactive ? 'none' : null }}
+    >
+      {/* <Title
+        select={Object.keys(selectedOption).length > 0}
+        color={selectedOption ? selectedOption.fontColor : ''}
+      /> */}
+      <div style={{ display: 'flex', width: '100%' }}>
         <div
-        // style={
-        //   {
-        //     // backgroundImage: `url(${blend_bg})`,
-        //     // backgroundPosition: 'center',
-        //     // backgroundSize: 'cover',
-        //     // backgroundRepeat: 'no-repeat',
-        //     // width: '100vw',
-        //     // height: '100vh'sD_a
-        // }
+          style={{
+            left: `${one}`,
+          }}
+          className={`   ${styles.panelOne}     ${
+            isSelected !== 'main' ? styles.panelNoMain : styles.panel
+          }
+          `}
+          onClick={() => setIsSelected('one')}
         >
-          <h3>Wild Forest</h3>
+          <div
+            className={`${
+              isSelected === 'main' ? styles.mask : styles.maskSelected
+            }`}
+          >
+            <img
+              src={malbec_bg}
+              alt=''
+              className={`        ${
+                isSelected !== 'main' ? styles.fondoNoMail : styles.fondo
+              }`}
+            />
+          </div>
+        </div>
+        <div
+          style={{
+            left: `${isSelected === 'main' ? 'none' : reOrder('two')}`,
+          }}
+          className={`  ${styles.panelTwo}      ${
+            isSelected !== 'main' ? styles.panelNoMain : styles.panel
+          }
+          
+        }`}
+          onClick={() => setIsSelected('two')}
+        >
+          <div
+            className={`${
+              isSelected === 'main' ? styles.mask : styles.maskSelected
+            }`}
+          >
+            <img
+              src={blend_bg}
+              alt=''
+              style={{
+                // padding: isSelected !== 'main' ? '0' : '5% 0',
+                height: '100%',
+              }}
+            />
+          </div>
+        </div>
+        <div
+          style={{
+            left: `${isSelected === 'main' ? 'none' : reOrder('three')}`,
+          }}
+          className={`
+          ${styles.panelThree}
+                 ${isSelected !== 'main' ? styles.panelNoMain : styles.panel}
+          `}
+          onClick={() => setIsSelected('three')}
+        >
+          <div
+          // className={`${
+          //   isSelected === 'main' ? styles.mask : styles.maskSelected
+          // }`}
+          >
+            <img
+              src={cabernet_franc_bg}
+              alt=''
+              style={{
+                // padding: isSelected !== 'main' ? '0' : '5% 0',
+                height: '100%',
+              }}
+            />
+          </div>
         </div>
       </div>
-      <div
-        style={Object.assign({}, style.panel, style.panelThree)}
-        // style={{ backgroundImage: `url(${cabernet_franc_bg})` }}
-        onClick={() => setIsSelected('three')}
-      >
-        <h3>Sunny Beach</h3>
-      </div>
+      {/* {Object.keys(selectedOption).length > 0 ? ( */}
+      <SideBar
+        toggleState={sideBarOpen}
+        options={wines}
+        selectedOption={selectedOption}
+        selectionFunction={changeSelectedOption}
+      />
+      {/* ) : null} */}
+      <img
+        src={dot}
+        alt=''
+        style={{
+          position: 'absolute',
+          zIndex: 100,
+          width: 'calc(100vw / 10)',
+          height: 'calc(100vw / 10)',
+          minHeight: '120px',
+          minWidth: '120px',
+          maxWidth: '230px',
+          maxHeight: '230px',
+          top: '55%',
+          left: '45%',
+        }}
+      />
     </div>
   );
 };

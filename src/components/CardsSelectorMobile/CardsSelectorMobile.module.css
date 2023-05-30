@@ -7,7 +7,7 @@
 @media only screen and (max-width: 600px) {
   .CardsSelectorMobileContainer {
     width: 100%;
-    height: calc(1000vh - 230px);
+    height: calc(100vh - 230px);
     background-color: aliceblue;
     overflow: hidden;
   }

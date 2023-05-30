@@ -1,0 +1,26 @@
+:root {
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: calc(100svh - 120px);
+    background-color: rgba(191, 255, 0, 0.121);
+    display: flex;
+    justify-content: center;
+    background: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 500px;
+
+}

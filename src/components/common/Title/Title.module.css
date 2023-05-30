@@ -1,0 +1,40 @@
+.isotipoContainer {
+    position: absolute;
+    z-index: 10;
+    left: 480px;
+    top: 250px;
+}
+
+.isotipo {
+    width: 100px;
+}
+
+.titleContainer {
+    position: absolute;
+    z-index: 10;
+    left: 810px;
+    top: 434px;
+}
+
+.title {
+    width: 400px;
+    filter: invert(1);
+    font-weight: 500;
+    font-size: 4rem;
+    letter-spacing: 5px;
+    user-select: none;
+}
+
+.dotContainer {
+    position: absolute;
+    z-index: 10;
+    left: 900px;
+    top: 600px;
+}
+
+.dot {
+    font-weight: 500;
+    font-size: 4rem;
+    letter-spacing: 5px;
+    user-select: none;
+}
