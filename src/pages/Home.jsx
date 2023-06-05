@@ -19,9 +19,10 @@ const Home = () => {
     </>
   ) : (
     <>
-      <HeaderInactive status={true} inactive={true} />
+      <Header inactive />
       <InactiveScreen />
       {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

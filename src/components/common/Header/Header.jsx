@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './Header.module.css';
 import { isotipo, logotipo } from '../../../assets';
 
-const Header = ({ status }) => {
+const Header = ({ status, inactive }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -28,7 +28,13 @@ const Header = ({ status }) => {
   }, []);
 
   return (
-    <div className={`${scrolled ? styles.headerScrolled : styles.header}`}>
+    <div
+      className={`${scrolled ? styles.headerScrolled : styles.header}`}
+      style={{
+        zIndex: inactive ? '0' : null,
+        boxShadow: inactive ? 'none' : 'inherit',
+      }}
+    >
       <div className={styles.section}>
         <img src={isotipo} alt='isotipo_anecdota' className={styles.isotipo} />
         <img src={logotipo} alt='logo_anecdota' className={styles.logotipo} />

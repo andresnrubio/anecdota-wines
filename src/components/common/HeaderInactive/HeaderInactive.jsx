@@ -47,9 +47,7 @@ const HeaderInactive = ({ status }) => {
             filter: 'none',
             top: '60%',
           }}
-        >
-          Nos estamos preparando ...
-        </h1>
+        ></h1>
       </div>
     </div>
   );
