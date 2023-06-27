@@ -1,14 +1,19 @@
 import styles from './WineCompositionBars.module.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-const WineCompositionBars = ({ malbec }) => {
+const WineCompositionBars = ({ detail }) => {
   const [bars, setBars] = useState([
-    { name: 'CUERPO', quantity: 6 },
-    { name: 'FRUTA', quantity: 4 },
-    { name: 'ALCOHOL', quantity: 3 },
-    { name: 'ACIDEZ', quantity: 5 },
-    { name: 'TANINOS', quantity: 5 },
+    { name: 'CUERPO', quantity: 0 },
+    { name: 'FRUTA', quantity: 0 },
+    { name: 'ALCOHOL', quantity: 0 },
+    { name: 'ACIDEZ', quantity: 0 },
+    { name: 'TANINOS', quantity: 0 },
   ]);
+  useEffect(() => {
+    if (detail) {
+      setBars(detail.descriptionValues);
+    }
+  }, [detail]);
 
   const WineCompositionBars = bars.map((bar, index) => (
     <div key={index} className={styles.bar}>

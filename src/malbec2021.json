@@ -1,20 +1,104 @@
-{   
-    "name": "MALBEC",
-    "year": 2021,
-    "composition": "93% MALBEC / 7% CABERNET SAUVIGNON",
-    "alcohol":  "14.2% v/v",
-    "ph": "3.85/5.21 g/l",
-    "sugar": "3.29 g/l",
-    "harvest": "MANUAL EN CAJAS DE 18KG / MIÉRCOLES 17 DE MARZO",
-    "oak": "10 MESES EN TANQUES DE HORMIGÓN CON 15% DE DUELAS FRANCES TOSTADO MEDIO Y SUAVE",
-    "stored": "5 AÑOS",
-    "color": "COLOR BORDEAUX",
-    "temperature": "16/18°C",
-    "grape": ["MALBEC", "CABERNET SAUVIGNON"],
-    "body": "",
-    "fruit": "",
-    "acidity": "3,85 / 5,21 g/l",
-    "tannins": "",
-    "description": "Color rojo intenso con tintes bordeax. Aromas a licor de cereza madura, vainilla, manteca y un dejo de eucalipto. En boca presenta estructura media a alta, con taninos firmes, buena mitad de boca y un final mas suave pero prolongado.",
-    "scent": ["Cereza", "Vainilla", "Manteca", "Eucalipto"]
-}
+[
+    {
+        "name": "MALBEC",
+        "year": 2021,
+        "composition": "93% MALBEC / 7% CABERNET SAUVIGNON",
+        "alcohol": "14.2% v/v",
+        "ph": "3.85/5.21 g/l",
+        "sugar": "3.29 g/l",
+        "harvest": "MANUAL EN CAJAS DE 18KG / MIÉRCOLES 17 DE MARZO",
+        "oak": "10 MESES EN TANQUES DE HORMIGÓN CON 15% DE DUELAS FRANCES TOSTADO MEDIO Y SUAVE",
+        "stored": "5 AÑOS",
+        "color": "COLOR BORDEAUX",
+        "temperature": "16/18°C",
+        "grape": [
+            "MALBEC",
+            "CABERNET SAUVIGNON"
+        ],
+        "body": "",
+        "fruit": "",
+        "acidity": "3,85 / 5,21 g/l",
+        "tannins": "",
+        "description": "Color rojo intenso con tintes bordeax. Aromas a licor de cereza madura, vainilla, manteca y un dejo de eucalipto. En boca presenta estructura media a alta, con taninos firmes, buena mitad de boca y un final mas suave pero prolongado.",
+        "scent": [
+            "Cereza",
+            "Vainilla",
+            "Manteca",
+            "Eucalipto"
+        ],
+        "descriptionValues": [
+            {
+                "name": "CUERPO",
+                "quantity": 6
+            },
+            {
+                "name": "FRUTA",
+                "quantity": 4
+            },
+            {
+                "name": "ALCOHOL",
+                "quantity": 3
+            },
+            {
+                "name": "ACIDEZ",
+                "quantity": 5
+            },
+            {
+                "name": "TANINOS",
+                "quantity": 5
+            }
+        ],
+        "bottleImage": "bottle_malbec"
+    },
+    {
+        "name": "MALBEC",
+        "year": 2021,
+        "composition": "93% MALBEC / 7% CABERNET SAUVIGNON",
+        "alcohol": "14.2% v/v",
+        "ph": "3.85/5.21 g/l",
+        "sugar": "3.29 g/l",
+        "harvest": "MANUAL EN CAJAS DE 18KG / MIÉRCOLES 17 DE MARZO",
+        "oak": "10 MESES EN TANQUES DE HORMIGÓN CON 15% DE DUELAS FRANCES TOSTADO MEDIO Y SUAVE",
+        "stored": "5 AÑOS",
+        "color": "COLOR BORDEAUX",
+        "temperature": "16/18°C",
+        "grape": [
+            "MALBEC",
+            "CABERNET SAUVIGNON"
+        ],
+        "body": "",
+        "fruit": "",
+        "acidity": "3,85 / 5,21 g/l",
+        "tannins": "",
+        "description": "Color rojo intenso con tintes bordeax. Aromas a licor de cereza madura, vainilla, manteca y un dejo de eucalipto. En boca presenta estructura media a alta, con taninos firmes, buena mitad de boca y un final mas suave pero prolongado.",
+        "scent": [
+            "Cereza",
+            "Vainilla",
+            "Manteca",
+            "Eucalipto"
+        ],
+        "descriptionValues": [
+            {
+                "name": "CUERPO",
+                "quantity": 6
+            },
+            {
+                "name": "FRUTA",
+                "quantity": 4
+            },
+            {
+                "name": "ALCOHOL",
+                "quantity": 3
+            },
+            {
+                "name": "ACIDEZ",
+                "quantity": 5
+            },
+            {
+                "name": "TANINOS",
+                "quantity": 5
+            }
+        ],
+        "bottleImage": "bottle_blend"
+    }
+]

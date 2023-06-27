@@ -3,33 +3,68 @@ import styles from './WineTechnicalSheet.module.css';
 import WineVarietals from './WineVarietals/WineVarietals';
 import WineComposition from './WineComposition/WineComposition';
 import WineDescription from './WineDescription/WineDescription';
-import malbec from '../malbec2021.json';
 import WineAroma from './WineAromas/WineAroma';
 import WineTechnicalTitle from './WineTechnicalTitle/WineTechnicalTitle';
 import WineTerroir from './WineTerroir/WineTerroir';
 import WineCompositionBars from './WineCompositionBars/WineCompositionBars';
+import {
+  bottle_blend,
+  bottle_cabernet,
+  bottle_malbec,
+  map_arg,
+  map_mendoza,
+  topografico,
+} from '../assets';
 
-const WineTechnicalSheet = (wineDetails) => {
+const WineTechnicalSheet = ({ wineDetails }) => {
+  const handleImage = (name) => {
+    switch (name) {
+      case 'bottle_blend':
+        return bottle_blend;
+      case 'bottle_cabernet':
+        return bottle_cabernet;
+      case 'bottle_malbec':
+        return bottle_malbec;
+
+      default:
+        break;
+    }
+  };
   return (
-    <div className={styles.technicalSheetContainer}>
-      <section className={styles.textInformation}>
-        <WineTechnicalTitle malbec={malbec} />
+    <>
+      <div className={styles.technicalSheetContainer}>
+        <section className={styles.wineComposition}>
+          <div className={styles.title}>
+            <WineTechnicalTitle detail={wineDetails} />
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'row', width: '100%' }}>
+            <div className={styles.detail}>
+              <WineComposition detail={wineDetails} />
 
-        <WineComposition malbec={malbec} />
+              <WineTerroir detail={wineDetails} />
+            </div>
+            <div className={styles.maps}>
+              <img src={map_mendoza} />
+              <img src={map_arg} />
+            </div>
+          </div>
+        </section>
 
-        <WineTerroir />
-      </section>
-      <section>
-        <WineVarietals />
+        <section className={styles.wineDescription}>
+          <WineVarietals detail={wineDetails} />
 
-        <WineCompositionBars malbec={malbec} />
+          <WineCompositionBars detail={wineDetails} />
 
-        <WineDescription />
+          <WineDescription detail={wineDetails} />
 
-        <WineAroma />
-      </section>
-      <div className='bottleImg'></div>
-    </div>
+          <WineAroma detail={wineDetails} />
+        </section>
+        <div className={styles.bottleImg}>
+          <img src={handleImage(wineDetails.bottleImage)} alt='' />
+        </div>
+      </div>
+      <div style={{ height: '100px', background: '#1e1e1e', width: '100%' }} />
+    </>
   );
 };
 
