@@ -1,6 +1,6 @@
-import blend_bg from './blend.png';
-import cabernet_franc_bg from './cabernet_franc.png';
-import malbec_bg from './malbec.png';
+import blend_bg from './blend.webp';
+import cabernet_franc_bg from './cabernet_franc.webp';
+import malbec_bg from './malbec_bg.webp';
 import logotipo from './logotipo.png';
 import isotipo from './isotipo.png';
 import vainilla_icon from './vainilla.png';
@@ -17,6 +17,7 @@ import bottle_malbec from './botella_malbec.png';
 import map_mendoza from './mapa_mendoza.png';
 import map_arg from './mapa_arg.png';
 import topografico from './topografico.png';
+import dot from './orangeDot.png';
 
 export {
   logotipo,
@@ -38,4 +39,5 @@ export {
   map_arg,
   map_mendoza,
   topografico,
+  dot
 };

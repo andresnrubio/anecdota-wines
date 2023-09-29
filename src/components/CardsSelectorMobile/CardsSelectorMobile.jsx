@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import styles from './CardsSelectorMobile.module.css';
 import { malbec_bg, blend_bg, cabernet_franc_bg } from '../../assets';
-const CardsSelectorMobile = () => {
+
+const CardsSelectorMobile = ({ inactive }) => {
   const [isSelected, setisSelected] = useState('malbec');
 
   const handleClick = (selectVar) => {
@@ -11,9 +12,9 @@ const CardsSelectorMobile = () => {
   return (
     <div className={styles.CardsSelectorMobileContainer}>
       <div
-        className={`${styles.frontCard} ${
-          isSelected === 'blend' ? styles.selected : ''
-        }`}
+        className={`${styles.frontCard} ${inactive ? styles.mask : ''} ${
+          inactive ? styles.cardOne : ''
+        } ${isSelected === 'blend' ? styles.selected : ''}`}
         onClick={() => handleClick('blend')}
       >
         <div
@@ -31,9 +32,9 @@ const CardsSelectorMobile = () => {
         </div>
       </div>
       <div
-        className={`${styles.frontCard} ${
-          isSelected === 'malbec' ? styles.selected : ''
-        }`}
+        className={`${styles.frontCard} ${inactive ? styles.mask : ''} ${
+          inactive ? styles.cardTwo : ''
+        } ${isSelected === 'malbec' ? styles.selected : ''}`}
         onClick={() => handleClick('malbec')}
       >
         <div
@@ -51,7 +52,7 @@ const CardsSelectorMobile = () => {
         </div>
       </div>
       <div
-        className={`${styles.frontCard} ${
+        className={`${styles.frontCard} ${inactive ? styles.cardThree : ''} ${
           isSelected === 'cabernetFranc' ? styles.selected : ''
         }`}
         onClick={() => handleClick('cabernetFranc')}

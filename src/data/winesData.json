@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "Blend",
+        "year": 2021,
+        "country": "Argentina",
+        "province": "Mendoza",
+        "img": "/src/assets/blend.png",
+        "fontColor": "lightgray"
+    },
+    {
+        "id": 2,
+        "name": "Malbec",
+        "year": 2021,
+        "country": "Argentina",
+        "province": "Mendoza",
+        "img": "/src/assets/malbec_bg.png",
+        "fontColor": "lightgray"
+    },
+    {
+        "id": 3,
+        "name": "Cabernet Franc",
+        "year": 2021,
+        "country": "Argentina",
+        "province": "Mendoza",
+        "img": "/src/assets/cabernet_franc.png",
+        "fontColor": "black"
+    }
+]

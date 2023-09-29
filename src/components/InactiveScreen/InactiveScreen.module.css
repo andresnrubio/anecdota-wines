@@ -1,0 +1,79 @@
+:root {
+    overflow: hidden;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .cardsMobile {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+        /* height: calc(100svh - 120px); */
+        /* background-color: rgba(191, 255, 0, 0.121); */
+        display: flex;
+        justify-content: center;
+        background: no-repeat;
+        background-position: center;
+        background-size: cover;
+        /* filter: blur(15px); */
+        height: 100dvh;
+    }
+
+    .center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo {
+        width: 500px;
+
+    }
+
+    .comingSoon {
+        position: absolute;
+        z-index: 2;
+        font-size: 5rem;
+        margin-top: -25rem
+    }
+}
+
+.cardsDesktop {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    /* height: calc(100svh - 120px); */
+    /* background-color: rgba(191, 255, 0, 0.121); */
+    display: flex;
+    justify-content: center;
+    background: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(15px);
+    height: 100dvh;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 500px;
+
+}
+
+.comingSoon {
+    position: absolute;
+    z-index: 50;
+    font-size: 3rem;
+    margin-top: -25rem;
+    -webkit-text-stroke: 0.1px black;
+}
