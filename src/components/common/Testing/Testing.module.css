@@ -1,0 +1,101 @@
+.parent {
+  width: 900px;
+  height: 500px;
+  border: 2px solid red;
+  margin: 15px auto;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.parent div {
+  transition: 1.5s ease;
+}
+.parent div img {
+  height: 100%;
+}
+.mask {
+  /* clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%); */
+  clip-path: polygon(0 0, 50% 0, 30% 100%, 0% 100%);
+  box-shadow: 20px 0px 20px 5px rgba(0, 0, 0, 0.45);
+  height: 110%;
+  /* max-width: calc(100vw - 2 * 630px); */
+  display: flex;
+  justify-content: center;
+  /* transition: width linear 2s; */
+  transition: all 2s ease-in;
+}
+
+/* .mask:active {
+  animation: clipPath 1.5s ease-in;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+} */
+
+.firstCard {
+  /* background-color: rgba(240, 255, 255, 0.404); */
+  width: 0px;
+  /* width: 33%; */
+  flex-grow: 1;
+  /* clip-path: polygon(0 0, 50% 0, 30% 100%, 0% 100%); */
+  z-index: 2;
+  align-items: center;
+  display: flex;
+  animation: clipPath 1.5s ease-in;
+}
+
+.firstCard:active {
+  transition: all 3s ease-in;
+  flex-grow: 15;
+}
+.firstCard:active .mask {
+  animation: clipPath 1.5s ease-in;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.secondCard {
+  /* background-color: rgba(58, 218, 218, 0.404); */
+  width: 0px;
+  /* width: 33%; */
+  flex-grow: 1;
+  /* clip-path: polygon(0 0, 50% 0, 30% 100%, 0% 100%); */
+  z-index: 1;
+  align-items: center;
+  display: flex;
+}
+.secondCard:active {
+  flex-grow: 15;
+  animation: clipPath 1.5s ease;
+  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
+}
+.secondCard:active .mask {
+  animation: clipPath 1.5s ease-in;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.thirdCard {
+  /* background-color: rgba(107, 201, 19, 0.404); */
+  width: 0px;
+  /* width: 33%; */
+  flex-grow: 1;
+  /* clip-path: polygon(0 0, 50% 0, 30% 100%, 0% 100%); */
+  z-index: 0;
+  align-items: center;
+  display: flex;
+}
+.thirdCard:hover {
+  flex-grow: 15;
+  animation: clipPath 1.5s ease;
+  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
+}
+.thirdCard:active .mask {
+  animation: clipPath 1.5s ease-in;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+@keyframes clipPath {
+  0% {
+    clip-path: polygon(0 0, 50% 0, 30% 100%, 0% 100%);
+  }
+
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}

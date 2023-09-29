@@ -6,15 +6,21 @@ import CardsSelectorMobile from '../components/CardsSelectorMobile/CardsSelector
 import { useState } from 'react';
 import InactiveScreen from '../components/InactiveScreen/InactiveScreen';
 import HeaderInactive from '../components/common/HeaderInactive/HeaderInactive';
+import Testing from '../components/common/Testing/Testing.jsx';
 import { dot } from '../assets';
+import CardSelectorStatic from '../components/CardSelectorStatic/CardSelectorStatic';
 
 const Home = () => {
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(true);
   return isActive ? (
+    // <>
+    //   <Testing />
+    // </>
     <>
       <Header />
-      <CardsSelectorMobile />
-      <CardsSelector />
+      <CardSelectorStatic />
+      {/* <CardsSelectorMobile />
+      <CardsSelector /> */}
       <Footer />
     </>
   ) : (

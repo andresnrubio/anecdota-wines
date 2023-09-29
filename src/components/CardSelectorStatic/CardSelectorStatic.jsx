@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import styles from './CardsSelector.module.css';
+import styles from './CardSelectorStatic.module.css';
 import { malbec_bg, blend_bg, cabernet_franc_bg, dot } from '../../assets';
 import SideBar from '../SideBar/SideBar';
 import wines from '../../data/winesData.json';
 import Title from '../common/Title/Title';
 
-const CardsSelector = ({ inactive }) => {
+const CardSelectorStatic = ({ inactive }) => {
   const [isSelected, setIsSelected] = useState('main');
   const [selectedOption, setSelectedOption] = useState({});
   const [sideBarOpen, setSideBarOpen] = useState(false);
@@ -161,14 +161,6 @@ const CardsSelector = ({ inactive }) => {
           </div>
         </div>
       </div>
-      {/* {Object.keys(selectedOption).length > 0 ? ( */}
-      <SideBar
-        toggleState={sideBarOpen}
-        options={wines}
-        selectedOption={selectedOption}
-        selectionFunction={changeSelectedOption}
-      />
-      {/* ) : null} */}
       <img
         src={dot}
         alt=''
@@ -189,4 +181,4 @@ const CardsSelector = ({ inactive }) => {
   );
 };
 
-export default CardsSelector;
+export default CardSelectorStatic;
