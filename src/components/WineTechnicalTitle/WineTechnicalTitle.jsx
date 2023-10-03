@@ -6,8 +6,10 @@ const WineTechnicalTitle = ({ detail }) => {
     <div className={styles.titleContainer}>
       {/* <h1 className={styles.technicalTitle}>POR LA ANÉCDOTA</h1> */}
       <h1 className={styles.technicalTitle}>{detail.name}</h1>
-      <h3 className={styles.location}>ALTO UGARTECHE, LUJÁN DE CUYO</h3>
-      <p className={styles.province}>MENDOZA, ARGENTINA</p>
+      <h3 className={styles.location}>{detail.region.title}</h3>
+      <p className={styles.province}>
+        {detail.region.province}, {detail.region.country}
+      </p>
       <h2 className={styles.year}>{detail.year}</h2>
     </div>
   );

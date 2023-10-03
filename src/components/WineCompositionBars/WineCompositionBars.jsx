@@ -17,7 +17,7 @@ const WineCompositionBars = ({ detail }) => {
 
   const WineCompositionBars = bars.map((bar, index) => (
     <div key={index} className={styles.bar}>
-      <label for={`${index + 1}`}>{bar.name}</label>
+      <label htmlFor={`${index + 1}`}>{bar.name}</label>
       <div className={styles.progress}>
         {[...Array(bar.quantity)].map((_, index) => (
           <div key={index} className={styles.barFiller}></div>

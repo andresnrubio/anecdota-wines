@@ -4,6 +4,8 @@ import {
   thermometer_icon,
   cabernet_fruit_icon,
   malbec_fruit_icon,
+  bonarda_fruit_icon,
+  cabernet_franc_fruit_icon,
 } from '../../assets';
 
 import { useState, useEffect } from 'react';
@@ -19,7 +21,8 @@ const WineVarietals = ({ detail }) => {
     switch (colorName) {
       case 'COLOR BORDEAUX':
         return color_icon;
-
+      case 'COLOR RUBY':
+        return color_icon;
       default:
         break;
     }
@@ -30,6 +33,10 @@ const WineVarietals = ({ detail }) => {
         return malbec_fruit_icon;
       case 'CABERNET SAUVIGNON':
         return cabernet_fruit_icon;
+      case 'BONARDA':
+        return bonarda_fruit_icon;
+      case 'CABERNET FRANC':
+        return cabernet_franc_fruit_icon;
 
       default:
         break;

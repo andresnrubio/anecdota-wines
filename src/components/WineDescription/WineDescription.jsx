@@ -5,7 +5,7 @@ const WineDescription = ({ detail }) => {
     <div>
       <h2>DESCRIPCIÓN</h2>
       <p style={{ fontWeight: '300', fontSize: '11px', lineHeight: '13px' }}>
-        {detail.description}
+        {detail ? detail.description : null}
       </p>
     </div>
   );

@@ -18,9 +18,9 @@ const SideBar = ({
     setSelectedItem(item);
   };
 
-  useEffect(() => {
-    console.log(options);
-  }, [options]);
+  // useEffect(() => {
+  //   console.log(options);
+  // }, [options]);
 
   const moveItemToFront = (item) => {
     const index = sidebarOptions.indexOf(item);
@@ -36,7 +36,7 @@ const SideBar = ({
     }
   }, []);
 
-  console.log(malbec_bg);
+  // console.log(malbec_bg);
   useEffect(() => {
     moveItemToFront(selected);
   }, [selected]);

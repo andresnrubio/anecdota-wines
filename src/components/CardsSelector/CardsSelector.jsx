@@ -174,7 +174,7 @@ const CardsSelector = ({ inactive }) => {
         alt=''
         style={{
           position: 'absolute',
-          zIndex: 100,
+          zIndex: 9,
           width: 'calc(100vw / 10)',
           height: 'calc(100vw / 10)',
           minHeight: '120px',
