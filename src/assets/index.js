@@ -3,7 +3,7 @@ import cabernet_franc_bg from './cabernet_franc.webp';
 import malbec_bg from './malbec_bg.webp';
 import logotipo from './logotipo.png';
 import isotipo from './isotipo.png';
-import vainilla_icon from './vainilla.png';
+// import vainilla_icon from './vainilla.png';
 import dark_chocolate from './chocolate.png';
 import raspberry from './frambuezas.png';
 import black_berry from './frutos_negros.png';
@@ -35,7 +35,7 @@ export {
   blend_bg,
   cabernet_franc_bg,
   malbec_bg,
-  vainilla_icon,
+  //   vainilla_icon,
   color_icon,
   cumin,
   raspberry,
