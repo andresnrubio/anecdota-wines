@@ -80,6 +80,22 @@ const CardsSelector = ({ inactive }) => {
       className={styles.container}
       style={{ pointerEvents: inactive ? 'none' : null }}
     >
+      <p
+        style={{
+          fontFamily: 'Futura Book',
+          fontSize: '65px',
+          color: '#fff1d8',
+          letterSpacing: '10px',
+          position: 'absolute',
+          zIndex: 3,
+          margin: 'auto',
+          textShadow: '1px 1px 3px #816d70e6',
+          width: '100%',
+          top: '45%',
+        }}
+      >
+        ANÉCDOTA
+      </p>
       {/* <Title
         select={Object.keys(selectedOption).length > 0}
         color={selectedOption ? selectedOption.fontColor : ''}
@@ -175,13 +191,13 @@ const CardsSelector = ({ inactive }) => {
         style={{
           position: 'absolute',
           zIndex: 9,
-          width: 'calc(100vw / 10)',
-          height: 'calc(100vw / 10)',
+          width: 'calc(100vw / 12.5)',
+          height: 'calc(100vw / 12.5)',
           minHeight: '120px',
           minWidth: '120px',
           maxWidth: '230px',
           maxHeight: '230px',
-          top: '55%',
+          top: '60%',
           left: '45%',
         }}
       />

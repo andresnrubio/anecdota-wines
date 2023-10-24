@@ -17,10 +17,10 @@
 
 .panel {
   /* height: 110%; */
-  width: 33.5%;
+  width: 35%;
   cursor: pointer;
-  height: 100%;
-  /* height: 110%; */
+  /* height: 100%; */
+  height: 105%;
   filter: drop-shadow(20px 1px 33px black);
   align-items: center;
   display: flex;
@@ -124,9 +124,11 @@
 @keyframes clipPath {
   0% {
     clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+    background-color: aliceblue;
   }
 
   100% {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background-color: #fff;
   }
 }
