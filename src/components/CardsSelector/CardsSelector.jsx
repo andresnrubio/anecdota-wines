@@ -80,7 +80,7 @@ const CardsSelector = ({ inactive }) => {
       className={styles.container}
       style={{ pointerEvents: inactive ? 'none' : null }}
     >
-      <p
+      {/* <p
         style={{
           fontFamily: 'Futura Book',
           fontSize: '65px',
@@ -95,7 +95,7 @@ const CardsSelector = ({ inactive }) => {
         }}
       >
         ANÉCDOTA
-      </p>
+      </p> */}
       {/* <Title
         select={Object.keys(selectedOption).length > 0}
         color={selectedOption ? selectedOption.fontColor : ''}
@@ -109,7 +109,7 @@ const CardsSelector = ({ inactive }) => {
             isSelected !== 'main' ? styles.panelNoMain : styles.panel
           }
           `}
-          onClick={() => setIsSelected('one')}
+          // onClick={() => setIsSelected('one')}
         >
           <div
             className={`${
@@ -134,7 +134,7 @@ const CardsSelector = ({ inactive }) => {
           }
           
         }`}
-          onClick={() => setIsSelected('two')}
+          // onClick={() => setIsSelected('two')}
         >
           <div
             className={`${
@@ -159,7 +159,7 @@ const CardsSelector = ({ inactive }) => {
           ${styles.panelThree}
                  ${isSelected !== 'main' ? styles.panelNoMain : styles.panel}
           `}
-          onClick={() => setIsSelected('three')}
+          // onClick={() => setIsSelected('three')}
         >
           <div
           // className={`${
@@ -185,7 +185,79 @@ const CardsSelector = ({ inactive }) => {
         selectionFunction={changeSelectedOption}
       />
       {/* ) : null} */}
-      <img
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'space-evenly',
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          height: 'calc(100vh - 200px)',
+          minHeight: '408px',
+          maxHeight: 'calc(1440px / 1.778)',
+          margin: 'auto',
+          // top: '45%',
+          // right: '35%',
+          // gap: '150px',
+        }}
+      >
+        <p
+          style={{
+            fontFamily: 'Futura Book',
+            fontSize: '65px',
+            color: '#fff1d8',
+            letterSpacing: '10px',
+            // position: 'absolute',
+            zIndex: 10,
+            // margin: '-5% 0 0 0 ',
+            textShadow: '1px 1px 3px #816d70e6',
+            width: '100%',
+            height: '65px',
+          }}
+        >
+          ANÉCDOTA
+        </p>
+        <img
+          src={dot}
+          alt=''
+          style={{
+            // position: 'absolute',
+            zIndex: 9,
+            width: 'calc(100vw / 12.5)',
+            height: 'calc(100vw / 12.5)',
+            margin: '0 6.5% 0 0 ',
+            minHeight: '120px',
+            minWidth: '120px',
+            maxWidth: '230px',
+            maxHeight: '230px',
+            display: 'none',
+            // top: '60%',
+            // left: '45%',
+          }}
+        />
+        <a
+          className={styles.button}
+          role='button'
+          // style={{
+          //   all: 'unset',
+          //   position: 'absolute',
+          //   width: '180px',
+          //   height: '60px',
+          //   borderColor: 'white',
+          //   border: '1px solid white',
+          //   color: 'white',
+          //   filter: 'blur 10px',
+          //   zIndex: '10',
+          // }}
+          href='https://anecdotawines.mercadoshops.com.ar/'
+          target='blank'
+        >
+          Ir a tienda
+        </a>
+      </div>
+      {/* <img
         src={dot}
         alt=''
         style={{
@@ -200,7 +272,7 @@ const CardsSelector = ({ inactive }) => {
           top: '60%',
           left: '45%',
         }}
-      />
+      /> */}
     </div>
   );
 };

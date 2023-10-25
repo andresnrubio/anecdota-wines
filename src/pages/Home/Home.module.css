@@ -36,3 +36,30 @@
   height: 100vh;
   width: 100%;
 }
+
+.button {
+  /* position: absolute; */
+  z-index: 10;
+  background: rgb(0 3 22 / 60%);
+  backdrop-filter: blur(1px);
+  border: 1px solid #fff;
+  /* border-left: none;
+  border-right: none; */
+  border-radius: 0.3076923077rem;
+  color: #fff;
+  display: block;
+  /* font-family: Proxima Nova, -apple-system, Roboto, Arial, sans-serif; */
+  font-size: 1.1538461538rem;
+  max-width: max-content;
+  padding: 0.9230769231rem 2.3076923077rem 0.7692307692rem;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.button:hover {
+  background: #fda1cfaf;
+  color: #fff;
+  transition: 0.3s;
+}
