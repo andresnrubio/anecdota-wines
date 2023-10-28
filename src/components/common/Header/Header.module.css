@@ -53,6 +53,9 @@
     width: 120%;
     height: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8%;
     background-color: #1e1e1e;
   }
 
@@ -75,10 +78,10 @@
       left 1s ease-in-out;
     width: 80px;
     height: 80px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* position: absolute; */
+    /* top: 50%;
+    left: 50%; */
+    /* transform: translate(-50%, -50%); */
   }
 
   .header .logotipo {
@@ -116,5 +119,16 @@
     left: calc(150px);
     transform: translate(-50%, -50%);
     filter: invert(1);
+  }
+
+  nav a {
+    all: unset;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  nav a:hover {
+    color: #f14726;
   }
 }

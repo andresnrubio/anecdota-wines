@@ -4,6 +4,13 @@ import { malbec_bg, blend_bg, cabernet_franc_bg, dot } from '../../assets';
 import SideBar from '../SideBar/SideBar';
 import wines from '../../data/winesData.json';
 import Title from '../common/Title/Title';
+import {
+  bg1024px,
+  bg1280px,
+  bg1440px,
+  bg1920px,
+  bg768px,
+} from '../../assets/backgroundIndex';
 
 const CardsSelector = ({ inactive }) => {
   const [isSelected, setIsSelected] = useState('main');
@@ -100,7 +107,7 @@ const CardsSelector = ({ inactive }) => {
         select={Object.keys(selectedOption).length > 0}
         color={selectedOption ? selectedOption.fontColor : ''}
       /> */}
-      <div style={{ display: 'flex', width: '100%' }}>
+      {/* <div style={{ display: 'flex', width: '100%' }}>
         <div
           style={{
             left: `${one}`,
@@ -176,14 +183,29 @@ const CardsSelector = ({ inactive }) => {
             />
           </div>
         </div>
-      </div>
+      </div> */}
       {/* {Object.keys(selectedOption).length > 0 ? ( */}
-      <SideBar
+
+      <div style={{ display: 'flex', width: '100%' }}>
+        {/* <img src={bg1920px} alt='bg' /> */}
+        <picture
+          style={{ display: 'flex', justifyContent: 'center', width: '100%' }}
+        >
+          <source media='(min-width: 1920px)' srcset={bg1920px} sizes='' />
+          <source media='(min-width: 1440px)' srcset={bg1440px} sizes='' />
+          <source media='(min-width: 1280px)' srcset={bg1280px} sizes='' />
+          <source media='(min-width: 1024px)' srcset={bg1024px} sizes='' />
+          <source media='(min-width: 768px )' srcset={bg768px} sizes='' />
+
+          <img src={bg1920px} alt='bg' />
+        </picture>
+      </div>
+      {/* <SideBar
         toggleState={sideBarOpen}
         options={wines}
         selectedOption={selectedOption}
         selectionFunction={changeSelectedOption}
-      />
+      /> */}
       {/* ) : null} */}
       <div
         style={{
@@ -193,7 +215,7 @@ const CardsSelector = ({ inactive }) => {
           justifyContent: 'space-evenly',
           position: 'absolute',
           width: '100%',
-          height: '100%',
+          // height: '100%',
           height: 'calc(100vh - 200px)',
           minHeight: '408px',
           maxHeight: 'calc(1440px / 1.778)',
@@ -206,13 +228,14 @@ const CardsSelector = ({ inactive }) => {
         <p
           style={{
             fontFamily: 'Futura Book',
-            fontSize: '65px',
+            fontSize: '500%',
             color: '#fff1d8',
             letterSpacing: '10px',
             // position: 'absolute',
             zIndex: 10,
+            marginLeft: '2%',
             // margin: '-5% 0 0 0 ',
-            textShadow: '1px 1px 3px #816d70e6',
+            textShadow: 'rgb(0 0 0 / 90%) 1px 2px 3px',
             width: '100%',
             height: '65px',
           }}

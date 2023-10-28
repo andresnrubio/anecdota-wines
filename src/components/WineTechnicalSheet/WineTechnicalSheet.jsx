@@ -35,7 +35,7 @@ const WineTechnicalSheet = ({ wineDetails }) => {
     }
   };
   return (
-    <>
+    <article>
       <div className={styles.technicalSheetContainer}>
         <section className={styles.wineComposition}>
           <div className={styles.title}>
@@ -68,7 +68,7 @@ const WineTechnicalSheet = ({ wineDetails }) => {
         </div>
       </div>
       <div style={{ height: '100px', background: '#1e1e1e', width: '100%' }} />
-    </>
+    </article>
   );
 };
 
