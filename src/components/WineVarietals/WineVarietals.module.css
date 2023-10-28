@@ -1,9 +1,35 @@
+.varietalDescriptionContainer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
 .contenedorVarietals {
-    width: 100px;
+  width: 100px;
 }
 
 .contenedorVarietals img {
-    max-width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 90px;
+}
+
+@media only screen and (max-width: 600px) {
+  .varietalDescriptionContainer {
+    gap: 1px;
+    z-index: 1;
+  }
+  .contenedorVarietals {
+    width: 80%;
+  }
+
+  .contenedorVarietals img {
+    max-width: 80%;
     height: auto;
-    max-height: 90px;
+    max-height: 50px;
+  }
+
+  .contenedorVarietals p {
+    font-size: 0.6rem;
+  }
 }

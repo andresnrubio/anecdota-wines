@@ -33,3 +33,29 @@
   font-weight: 100;
   margin: 0.5rem 0;
 }
+
+@media only screen and (max-width: 600px) {
+  .titleContainer {
+    margin: 1.8rem 0 0.5rem 0;
+    text-align: left;
+  }
+
+  .technicalTitle {
+    margin-bottom: 0.3rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.3rem;
+  }
+
+  .location {
+    font-weight: 600;
+    font-size: 0.5rem;
+    margin-bottom: 0.3rem;
+    line-height: 0.7rem;
+  }
+
+  .year {
+    font-size: 2.5rem;
+    font-weight: 100;
+    margin: 0.15rem 0;
+  }
+}

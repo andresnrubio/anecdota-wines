@@ -1,12 +1,27 @@
 .list {
-    list-style: none;
-    gap: 15px
+  list-style: none;
+  gap: 15px;
 }
 
 .list li {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .list li span {
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+  .list {
+    text-align: left;
+    font-size: 0.6rem;
+  }
+
+  .list li {
+    margin-top: 0.3rem;
+  }
+
+  .list li span {
     font-weight: 600;
+  }
 }

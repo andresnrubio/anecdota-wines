@@ -7,11 +7,13 @@
 @media only screen and (max-width: 768px) {
   .CardsSelectorMobileContainer {
     width: 100%;
-    height: calc(100vh - 230px);
-    /* background-color: aliceblue; */
+    max-height: calc(100vh - 230px);
+    height: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    position: relative;
+    pointer-events: auto;
   }
 
   .frontCard {
@@ -20,6 +22,12 @@
     box-shadow: 0px 1px 9px 5px rgba(0, 0, 0, 0.5);
   }
 
+  .frontCard p {
+    font-size: 75%;
+  }
+  .frontCard h3 {
+    font-size: 4vw;
+  }
   .selected {
     height: calc(100vh - 310px);
   }
@@ -31,6 +39,7 @@
     height: 100vh;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
+    /* font-size: 14px; */
     font-size: 14px;
     letter-spacing: 2px;
     -webkit-text-stroke: 0.3px #1e1e1e;
@@ -41,6 +50,19 @@
     height: 40px;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .titleLight {
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .titleLight p,
+  .titleLight h3 {
+    text-shadow: 1px 0px 3px black;
   }
 
   .malbec {
@@ -54,14 +76,19 @@
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     letter-spacing: 2px;
-    font-size: 12px;
+    /* font-size: 12px; */
+  }
+
+  .region p {
+    font-size: 75%;
   }
 
   .region .pais {
     font-family: 'Raleway', sans-serif;
-    font-weight: 300;
+    font-weight: 600;
+    font-size: 60%;
     letter-spacing: 2px;
-    font-size: 10px;
+    /* font-size: 10px; */
     -webkit-text-stroke: 0px #1e1e1e;
   }
 
@@ -72,7 +99,7 @@
     /* max-width: calc(100vw - 2 * 630px); */
     display: flex;
     justify-content: center;
-    transition: width linear 2s
+    transition: width linear 2s;
   }
 
   .cardOne {
@@ -89,6 +116,5 @@
   .cardThree {
     z-index: 1;
     margin-top: -550px;
-
   }
 }

@@ -43,3 +43,44 @@
     width: 30px;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .barContainer {
+    width: 250px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .bar {
+    font-weight: 600;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .bar label {
+    width: 50px;
+    margin-right: 12px;
+    text-align: start;
+  }
+
+  .progress {
+    width: 180px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(217 200 177 / 50%);
+  }
+
+  .barFiller {
+    width: 10px;
+    height: 100%;
+    background-color: rgb(130, 9, 41);
+    animation: progressBar 1.5s ease-in-out;
+    animation-fill-mode: both;
+  }
+}

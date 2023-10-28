@@ -1,0 +1,89 @@
+.technicalSheetContainerMobile {
+  background-color: #ffffff;
+  color: #1e1e1e;
+  display: flex;
+  justify-content: space-between;
+  height: calc(100vh - 100px);
+  max-width: 1440px;
+  /* scroll-snap-align: start; */
+  scroll-snap-align: start;
+  overflow-x: hidden;
+}
+.technicalInfo {
+  margin-left: 5%;
+  width: 65%;
+}
+
+.wineComposition {
+  margin: 2rem;
+  text-align: start;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wineComposition .detail {
+  margin: 1rem 0;
+}
+
+.wineComposition .maps {
+  width: 40%;
+  /* margin-top: 15%; */
+}
+
+.wineComposition .maps img {
+  width: 230px;
+}
+
+.wineDescription {
+  margin: 2rem;
+  text-align: start;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.bottleImg {
+  width: 20%;
+  position: relative;
+}
+
+.bottleImg img {
+  height: 80vh;
+  z-index: 0;
+  position: absolute;
+  left: -15px;
+  /* top: -44px; */
+  filter: drop-shadow(0px 0px 2px white);
+}
+
+@media only screen and (max-width: 600px) {
+  .technicalSheetContainerMobile {
+    height: 100vh;
+    /* scroll-snap-align: start; */
+    scroll-snap-align: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  .bottleImg {
+    margin-top: 20px;
+    position: sticky;
+    top: 25px;
+  }
+  .button {
+    border: 1px solid #000000;
+    border-radius: 0.3076923077rem;
+    color: #000000;
+    display: block;
+    /* font-family: Proxima Nova, -apple-system, Roboto, Arial, sans-serif; */
+    font-size: 1.1538461538rem;
+    max-width: max-content;
+    padding: 0.9230769231rem 2.3076923077rem 0.7692307692rem;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+    width: 100%;
+    margin: auto;
+  }
+}

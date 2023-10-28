@@ -1,12 +1,11 @@
 import React from 'react';
+import styles from './WineDescription.module.css';
 
 const WineDescription = ({ detail }) => {
   return (
-    <div>
+    <div className={styles.descriptionContainer}>
       <h2>DESCRIPCIÓN</h2>
-      <p style={{ fontWeight: '300', fontSize: '11px', lineHeight: '13px' }}>
-        {detail ? detail.description : null}
-      </p>
+      <p className={styles.description}>{detail ? detail.description : null}</p>
     </div>
   );
 };

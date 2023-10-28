@@ -1,8 +1,50 @@
-.contenedorAroma {
-    width: 100px;
+.containerAromaIcons {
+  width: 100px;
+  display: flex;
 }
 
-.contenedorAroma img {
-    max-width: 100%;
+.containerAromaIcons img {
+  max-width: 100%;
+  height: auto;
+  max-height: 60px;
+}
+
+.containerAroma {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .aromaSectionContainer {
+    gap: 1px;
+    z-index: 1;
+  }
+
+  .aromaTitle {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    text-align: left;
+    letter-spacing: 0.2rem;
+  }
+
+  .contenedorAroma {
+    width: 80%;
+  }
+
+  .containerAromaIcons {
+    max-width: 80%;
     height: auto;
+    max-height: 50px;
+  }
+
+  .containerAromaIcons img {
+    max-width: 80%;
+    height: auto;
+    max-height: 50px;
+  }
+
+  .containerAromaIcons p {
+    font-size: 0.6rem;
+  }
 }

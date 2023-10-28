@@ -64,15 +64,15 @@ const WineAroma = ({ detail }) => {
   }, [detail]);
 
   const WineAroma = icons.map((icon, index) => (
-    <div key={index} className={styles.contenedorAroma}>
+    <div key={index} className={styles.containerAromaIcons}>
       <img src={icon.route} alt={`Imagen ${index + 1}`} />
-      <p>{icon.text}</p>
+      <p>{icon.text.toUpperCase()}</p>
     </div>
   ));
 
   return (
-    <>
-      <h2>AROMAS</h2>
+    <div className={styles.contenedorAroma}>
+      <h2 className={styles.aromaTitle}>AROMAS</h2>
       <div
         style={{
           display: 'flex',
@@ -83,7 +83,7 @@ const WineAroma = ({ detail }) => {
       >
         {WineAroma}
       </div>
-    </>
+    </div>
   );
   D;
 };

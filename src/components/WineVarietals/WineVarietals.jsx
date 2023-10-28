@@ -63,15 +63,7 @@ const WineVarietals = ({ detail }) => {
   ));
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        gap: '30px',
-      }}
-    >
-      {wineVarietals}
-    </div>
+    <div className={styles.varietalDescriptionContainer}>{wineVarietals}</div>
   );
 };
 

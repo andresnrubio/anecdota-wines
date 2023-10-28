@@ -1,3 +1,37 @@
 .terroirDescription {
   font-family: 'Montserrat', sans-serif;
 }
+
+.terroirContainer {
+  width: calc(100% + 100px);
+  margin-top: 1rem;
+}
+
+.terroirTitle {
+  margin-bottom: 1rem;
+}
+@media only screen and (max-width: 600px) {
+  .terroirContainer {
+    text-align: left;
+    width: calc(100% + 100px);
+    margin: 0.5rem 0;
+    letter-spacing: 0.2rem;
+  }
+
+  .terroirTitle {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .terroirDescription {
+    font-size: 0.7rem;
+    width: 250px;
+    letter-spacing: unset;
+    font-weight: 300;
+    line-height: 13px;
+  }
+
+  .topografic {
+    width: 65%;
+  }
+}

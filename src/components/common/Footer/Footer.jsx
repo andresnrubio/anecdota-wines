@@ -4,7 +4,7 @@ import styles from './Footer.module.css';
 const Footer = () => {
   return (
     <div className={styles.footerContainer}>
-      <h3>Proximamente...</h3>
+      {/* <h3>Proximamente...</h3> */}
     </div>
   );
 };
