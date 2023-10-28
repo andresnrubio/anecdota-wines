@@ -5,13 +5,21 @@
 }
 
 .contenedorVarietals {
-  width: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 .contenedorVarietals img {
   max-width: 100%;
   height: auto;
   max-height: 90px;
+}
+
+.contenedorVarietals {
+  font-size: 0.8rem;
 }
 
 @media only screen and (max-width: 600px) {

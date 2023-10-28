@@ -55,12 +55,16 @@ const WineVarietals = ({ detail }) => {
     }
   }, [detail]);
 
-  const wineVarietals = icons.map((icon, index) => (
-    <div key={index} className={styles.contenedorVarietals}>
-      <img src={icon.route} alt={`Imagen ${index + 1}`} />
-      <p>{icon.text}</p>
-    </div>
-  ));
+  const wineVarietals = icons.map((icon, index) => {
+    if (icon.route) {
+      return (
+        <div key={index} className={styles.contenedorVarietals}>
+          <img src={icon.route} alt={`Imagen ${index + 1}`} />
+          <p>{icon.text}</p>
+        </div>
+      );
+    }
+  });
 
   return (
     <div className={styles.varietalDescriptionContainer}>{wineVarietals}</div>

@@ -1,12 +1,19 @@
 .containerAromaIcons {
   width: 100px;
   display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.containerAromaIcons p {
+  height: 50%;
+  font-size: 0.8rem;
 }
 
 .containerAromaIcons img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  max-height: 60px;
+  max-height: 80px;
 }
 
 .containerAroma {

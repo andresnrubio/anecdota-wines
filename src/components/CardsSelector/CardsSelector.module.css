@@ -126,7 +126,7 @@
 @keyframes clipPath {
   0% {
     clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
   }
 
   100% {

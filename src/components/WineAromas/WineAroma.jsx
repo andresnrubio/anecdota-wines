@@ -35,19 +35,19 @@ const WineAroma = ({ detail }) => {
         return eucalyptus_icon;
       case 'Frambueza':
         return raspberry;
-      case 'Chocolate_amargo':
+      case 'Chocolate amargo':
         return dark_chocolate;
       case 'Regaliz':
         return liquorice;
-      case 'Pimienta_negra':
+      case 'Pimienta negra':
         return black_pepper;
-      case 'Frutos_rojos':
+      case 'Frutos rojos':
         return red_berry;
       case 'Comino':
         return cumin;
-      case 'Pimiento_verde':
+      case 'Pimiento verde':
         return green_bell_pepper;
-      case 'Frutos_negros':
+      case 'Frutos negros':
         return black_berry;
       default:
         break;
@@ -71,7 +71,8 @@ const WineAroma = ({ detail }) => {
   ));
 
   return (
-    <div className={styles.contenedorAroma}>
+    // <div className={styles.contenedorAroma}>
+    <>
       <h2 className={styles.aromaTitle}>AROMAS</h2>
       <div
         style={{
@@ -83,7 +84,8 @@ const WineAroma = ({ detail }) => {
       >
         {WineAroma}
       </div>
-    </div>
+    </>
+    // </div>
   );
   D;
 };

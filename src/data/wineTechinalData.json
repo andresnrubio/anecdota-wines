@@ -97,9 +97,9 @@
         "description": "Intensidad de color medio a intenso, rojo con tintes rubí. En aromas frambuesa, chocolate amargo, especias como regaliz y pimienta negra, y un fondo de pétalos de rosa. En boca es amable con gran tomabilidad. Aterciopelado, fresco y de postgusto prolongado, con acento en frutos rojos maduros.",
         "scent": [
             "Frambueza",
-            "Chocolate_amargo",
+            "Chocolate amargo",
             "Regaliz",
-            "Pimienta_negra"
+            "Pimienta negra"
         ],
         "descriptionValues": [
             {
@@ -157,10 +157,10 @@
         "acidity": "3,85 / 5,21 g/l",
         "description": "Es fresco y frutado. En nariz muestra notas de comino, pimiento verde y frutos rojos. Es un vino bien elaborado con textura mineral e intensos sabores a frutos negros, mientras que una buena acidez y taninos suaves brindan una buena sensación en boca. Tiene un postgusto fresco y agradable.",
         "scent": [
-            "Frutos_rojos",
+            "Frutos rojos",
             "Comino",
-            "Pimiento_verde",
-            "Frutos_negros"
+            "Pimiento verde",
+            "Frutos negros"
         ],
         "descriptionValues": [
             {

@@ -1,9 +1,16 @@
 .description {
-  font-weight: 300;
+  /* font-weight: 300;
   font-size: 11px;
-  line-height: 13px;
+  line-height: 13px; */
+}
+.description {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5rem;
 }
 
+.descriptionContainer h2 {
+  margin-bottom: 1rem;
+}
 @media only screen and (max-width: 600px) {
   .descriptionContainer {
     text-align: left;
