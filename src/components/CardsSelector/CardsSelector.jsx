@@ -227,7 +227,7 @@ const CardsSelector = ({ inactive }) => {
       >
         <p
           style={{
-            fontFamily: 'Futura Book',
+            fontFamily: 'Futura Book, Jost',
             fontSize: '500%',
             color: '#fff1d8',
             letterSpacing: '10px',

@@ -87,7 +87,6 @@ const WineAroma = ({ detail }) => {
     </>
     // </div>
   );
-  D;
 };
 
 export default WineAroma;
