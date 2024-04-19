@@ -24,6 +24,9 @@ import cherry_icon from './Cereza.png';
 import bottle_blend from './botella_blend.png';
 import bottle_cabernet from './botella_cabernet_franc.png';
 import bottle_malbec from './botella_malbec.png';
+import bottle_blend_mob from './botella_blend_mob.png';
+import bottle_cabernet_mob from './botella_cabernet_franc_mob.png';
+import bottle_malbec_mob from './botella_malbec_mob.png';
 import map_mendoza from './mapa_mendoza.png';
 import map_arg from './mapa_arg.png';
 import topografico from './topografico.png';
@@ -56,6 +59,9 @@ export {
   bottle_blend,
   bottle_cabernet,
   bottle_malbec,
+  bottle_malbec_mob,
+  bottle_cabernet_mob,
+  bottle_blend_mob,
   map_arg,
   map_mendoza,
   topografico,

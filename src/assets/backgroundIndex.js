@@ -8,12 +8,9 @@ import malbecMobile from './malbecMobile.png';
 import blendMobile from './blendMobile.png';
 
 export {
-  bg768px,
+  // bg768px,
   bg1024px,
-  bg1280px,
-  bg1440px,
+  // bg1280px,
+  // bg1440px,
   bg1920px,
-  cabernetMobile,
-  malbecMobile,
-  blendMobile,
 };

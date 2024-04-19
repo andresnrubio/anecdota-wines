@@ -8,12 +8,9 @@ import WineTechnicalTitle from '../WineTechnicalTitle/WineTechnicalTitle';
 import WineTerroir from '../WineTerroir/WineTerroir';
 import WineCompositionBars from '../WineCompositionBars/WineCompositionBars';
 import {
-  bottle_blend,
-  bottle_cabernet,
-  bottle_malbec,
-  map_arg,
-  map_mendoza,
-  topografico,
+  bottle_blend_mob,
+  bottle_cabernet_mob,
+  bottle_malbec_mob,
 } from '../../assets';
 
 const WineTechnicalSheet = ({ wineDetails }) => {
@@ -21,11 +18,11 @@ const WineTechnicalSheet = ({ wineDetails }) => {
     if (wineDetails) {
       switch (name) {
         case 'bottle_blend':
-          return bottle_blend;
+          return bottle_blend_mob;
         case 'bottle_cabernet':
-          return bottle_cabernet;
+          return bottle_cabernet_mob;
         case 'bottle_malbec':
-          return bottle_malbec;
+          return bottle_malbec_mob;
 
         default:
           break;
@@ -34,6 +31,7 @@ const WineTechnicalSheet = ({ wineDetails }) => {
       return undefined;
     }
   };
+
   return (
     <article>
       <div style={{ height: '50px', background: '#1e1e1e', width: '100%' }} />

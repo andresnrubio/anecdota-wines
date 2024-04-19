@@ -37,7 +37,7 @@
   align-items: center;
   display: flex;
   position: relative;
-  transition: left linear 1s, width linear 3s, height linear 2s;
+  /* transition: left linear 1s, width linear 3s, height linear 2s; */
   /* left: 0 !important; */
 }
 

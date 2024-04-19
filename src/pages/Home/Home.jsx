@@ -5,7 +5,7 @@ import Footer from '../../components/common/Footer/Footer.jsx';
 import CardsSelector from '../../components/CardsSelector/CardsSelector';
 import WineTechnicalSheet from '../../components/WineTechnicalSheet/WineTechnicalSheet';
 import WineTechnicalSheetMobile from '../../components/WineTechnicalSheetMobile/WineTechnicalSheetMobile';
-import wineTechinalData from '../../data/wineTechinalData.json';
+import wineTechnicalData from '../../data/wineTechnicalData.json';
 import { useState } from 'react';
 import InactiveScreen from '../../components/InactiveScreen/InactiveScreen';
 import CardsSelectorMobile from '../../components/CardsSelectorMobile/CardsSelectorMobile';
@@ -13,16 +13,21 @@ import useMediaQuery from '../../hooks/useMediaQuery';
 
 const Home = () => {
   const [isActive, setIsActive] = useState(true);
-  const isDesktop = useMediaQuery('(min-width: 960px)');
+  const { isMobile, isDesktop } = useMediaQuery();
+  // const isDesktop = useMediaQuery('(min-width: 960px)').matches;
 
   return isActive ? (
     <>
       <main className={styles.container}>
         <section className={styles.hero}>
           <Header />
-          {isDesktop ? (
-            <CardsSelector />
-          ) : (
+          {isDesktop && (
+            <>
+              <div></div>
+              <CardsSelector />
+            </>
+          )}
+          {isMobile && (
             <>
               <CardsSelectorMobile />
               <Footer />
@@ -30,17 +35,12 @@ const Home = () => {
           )}
         </section>
         <section className={styles.wineTechnicalSection}>
-          {isDesktop
-            ? wineTechinalData.map((varietal, index) => (
-                <div key={index} className={styles.section}>
-                  <WineTechnicalSheet wineDetails={varietal} />
-                </div>
-              ))
-            : wineTechinalData.map((varietal, index) => (
-                <div key={index} className={styles.section}>
-                  <WineTechnicalSheetMobile wineDetails={varietal} />
-                </div>
-              ))}
+          {wineTechnicalData.map((varietal, index) => (
+            <div key={index} className={styles.section}>
+              {isDesktop && <WineTechnicalSheet wineDetails={varietal} />}
+              {isMobile && <WineTechnicalSheetMobile wineDetails={varietal} />}
+            </div>
+          ))}
         </section>
       </main>
     </>

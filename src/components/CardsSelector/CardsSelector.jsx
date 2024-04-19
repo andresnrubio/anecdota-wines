@@ -4,13 +4,7 @@ import { malbec_bg, blend_bg, cabernet_franc_bg, dot } from '../../assets';
 import SideBar from '../SideBar/SideBar';
 import wines from '../../data/winesData.json';
 import Title from '../common/Title/Title';
-import {
-  bg1024px,
-  bg1280px,
-  bg1440px,
-  bg1920px,
-  bg768px,
-} from '../../assets/backgroundIndex';
+import { bg1920px } from '../../assets/backgroundIndex';
 
 const CardsSelector = ({ inactive }) => {
   const [isSelected, setIsSelected] = useState('main');
@@ -19,6 +13,8 @@ const CardsSelector = ({ inactive }) => {
   const [one, setOne] = useState();
   const [two, setTwo] = useState();
   const [three, setThree] = useState();
+
+  console.log('Carga Desktop');
 
   useEffect(() => {
     if (isSelected !== 'main') {
@@ -191,11 +187,11 @@ const CardsSelector = ({ inactive }) => {
         <picture
           style={{ display: 'flex', justifyContent: 'center', width: '100%' }}
         >
-          <source media='(min-width: 1920px)' srcset={bg1920px} sizes='' />
-          <source media='(min-width: 1440px)' srcset={bg1440px} sizes='' />
+          <source media='(min-width: 1920px)' srcSet={bg1920px} sizes='' />
+          {/* <source media='(min-width: 1440px)' srcset={bg1440px} sizes='' />
           <source media='(min-width: 1280px)' srcset={bg1280px} sizes='' />
           <source media='(min-width: 1024px)' srcset={bg1024px} sizes='' />
-          <source media='(min-width: 768px )' srcset={bg768px} sizes='' />
+          <source media='(min-width: 768px )' srcset={bg768px} sizes='' /> */}
 
           <img src={bg1920px} alt='bg' />
         </picture>

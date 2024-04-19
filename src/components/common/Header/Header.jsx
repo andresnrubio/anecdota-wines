@@ -37,18 +37,21 @@ const Header = ({ status, inactive }) => {
     >
       <nav className={styles.section}>
         <a
-          aria-label='Chat on WhatsApp'
+          aria-label='Contacto'
           href='https://wa.me/541144445264?text=%48%6F%6C%61%21%20%45%73%74%6F%79%20%69%6E%74%65%72%65%73%61%64%6F%20%65%6E%20%73%61%62%65%72%20%6D%61%73%20%73%6F%62%72%65%20%41%6E%C3%A9%63%64%6F%74%61'
           target='blank'
+          rel='noreferer'
         >
           Contacto
         </a>
         <img src={isotipo} alt='isotipo_anecdota' className={styles.isotipo} />
         <img src={logotipo} alt='logo_anecdota' className={styles.logotipo} />
         <a
+          aria-label='Tienda'
           role='button'
           href='https://anecdotawines.mercadoshops.com.ar/'
           target='blank'
+          rel='noreferer'
         >
           Tienda
         </a>

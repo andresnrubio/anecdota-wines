@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import styles from './CardsSelectorMobile.module.css';
-import { malbec_bg, blend_bg, cabernet_franc_bg } from '../../assets';
-import {
-  blendMobile,
-  cabernetMobile,
-  malbecMobile,
-} from '../../assets/backgroundIndex';
+import cabernetMobile from '../../assets/cabernetMobile.png';
+import malbecMobile from '../../assets/malbecMobile.png';
+import blendMobile from '../../assets/blendMobile.png';
 
 const CardsSelectorMobile = ({ inactive }) => {
   const [isSelected, setIsSelected] = useState('blend');
   const [isTransitionFinish, setTransitionFinish] = useState(true);
+
+  console.log('Carga Mobile');
 
   const timerForTransition = () => {
     setTransitionFinish(false);
